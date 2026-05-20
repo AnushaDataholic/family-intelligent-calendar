@@ -1,0 +1,389 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    color: #172033;
+    background: #f5f7fb;
+  }
+  
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  .auth-page {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1.1fr 420px;
+    align-items: center;
+    gap: 40px;
+    padding: 48px;
+    background:
+      linear-gradient(rgba(15, 23, 42, 0.46), rgba(15, 23, 42, 0.52)),
+      url("https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=1800&q=80");
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .auth-copy {
+    color: white;
+    max-width: 680px;
+  }
+  
+  .auth-copy h1 {
+    font-size: 56px;
+    line-height: 1.05;
+    margin: 0 0 18px;
+  }
+  
+  .auth-copy p {
+    font-size: 20px;
+    line-height: 1.6;
+    max-width: 620px;
+  }
+  
+  .auth-card,
+  .panel,
+  .calendar-panel,
+  .event-modal {
+    background: rgba(255, 255, 255, 0.94);
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    border-radius: 8px;
+    box-shadow: 0 24px 70px rgba(15, 23, 42, 0.18);
+  }
+  
+  .auth-card {
+    padding: 28px;
+    display: grid;
+    gap: 14px;
+  }
+  
+  .auth-card h2,
+  .panel h2,
+  .event-modal h2 {
+    margin: 0;
+  }
+  
+  input,
+  select,
+  textarea {
+    width: 100%;
+    border: 1px solid #d7deea;
+    border-radius: 6px;
+    padding: 12px;
+    font: inherit;
+    background: white;
+  }
+  
+  textarea {
+    min-height: 86px;
+    resize: vertical;
+  }
+  
+  button,
+  .primary-link {
+    border: 0;
+    border-radius: 6px;
+    padding: 11px 15px;
+    font-weight: 700;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+  }
+  
+  .primary-btn,
+  .primary-link {
+    background: #2563eb;
+    color: white;
+  }
+  
+  .switch-link,
+  .muted {
+    color: #697386;
+  }
+  
+  .error,
+  .notice {
+    background: #fff1f2;
+    color: #be123c;
+    border: 1px solid #fecdd3;
+    border-radius: 6px;
+    padding: 10px 12px;
+  }
+  
+  .notice {
+    background: #ecfdf5;
+    color: #047857;
+    border-color: #a7f3d0;
+    max-width: 1180px;
+    margin: 0 auto 16px;
+  }
+  
+  .app-bg {
+    min-height: 100vh;
+    background:
+      linear-gradient(rgba(248, 250, 252, 0.86), rgba(248, 250, 252, 0.9)),
+      url("https://images.unsplash.com/photo-1609220136736-443140cffec6?auto=format&fit=crop&w=1800&q=80");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+  }
+  
+  .navbar {
+    height: 68px;
+    padding: 0 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.9);
+    border-bottom: 1px solid #e6ebf2;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  
+  .brand,
+  .nav-actions,
+  .nav-actions a,
+  .nav-actions button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .brand {
+    font-weight: 800;
+  }
+  
+  .nav-actions {
+    gap: 14px;
+  }
+  
+  .nav-actions button {
+    background: #eef2ff;
+    color: #1e3a8a;
+  }
+  
+  .nav-user {
+    color: #64748b;
+    font-size: 14px;
+  }
+  
+  .dashboard,
+  .calendar-shell {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 28px;
+  }
+  
+  .hero-band {
+    color: white;
+    padding: 42px;
+    border-radius: 8px;
+    background:
+      linear-gradient(rgba(37, 99, 235, 0.76), rgba(15, 23, 42, 0.78)),
+      url("https://images.unsplash.com/photo-1504151932400-72d4384f04b3?auto=format&fit=crop&w=1600&q=80");
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 22px;
+  }
+  
+  .hero-band h1 {
+    margin: 0 0 10px;
+    font-size: 38px;
+  }
+  
+  .hero-band p {
+    max-width: 680px;
+    line-height: 1.6;
+  }
+  
+  .dashboard-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+  
+  .panel {
+    padding: 22px;
+  }
+  
+  .panel.wide {
+    grid-column: 1 / -1;
+  }
+  
+  .section-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 18px;
+  }
+  
+  .stack {
+    display: grid;
+    gap: 12px;
+  }
+  
+  .inline-form {
+    display: grid;
+    grid-template-columns: 1fr 180px 160px;
+    gap: 12px;
+    margin-bottom: 18px;
+  }
+  
+  .list {
+    display: grid;
+    gap: 10px;
+  }
+  
+  .list-item {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    justify-content: space-between;
+  }
+  
+  .list-item.active {
+    border-color: #2563eb;
+    background: #eff6ff;
+  }
+  
+  .table {
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .table-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 12px 14px;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  
+  .table-row:last-child {
+    border-bottom: 0;
+  }
+  
+  .table-head {
+    background: #f8fafc;
+    font-weight: 800;
+  }
+  
+  .calendar-screen {
+    background:
+      linear-gradient(rgba(15, 23, 42, 0.5), rgba(15, 23, 42, 0.5)),
+      url("https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=1800&q=80");
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .calendar-header {
+    color: white;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    margin-bottom: 18px;
+  }
+  
+  .calendar-header h1 {
+    font-size: 38px;
+    margin: 0 0 8px;
+  }
+  
+  .calendar-header p {
+    margin: 0;
+    color: #dbeafe;
+  }
+  
+  .family-chip {
+    background: rgba(255, 255, 255, 0.18);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.32);
+    border-radius: 999px;
+    padding: 9px 14px;
+  }
+  
+  .calendar-panel {
+    padding: 20px;
+  }
+  
+  .modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.58);
+    display: grid;
+    place-items: center;
+    padding: 24px;
+    z-index: 20;
+  }
+  
+  .event-modal {
+    width: 560px;
+    max-width: calc(100vw - 32px);
+    max-height: calc(100vh - 48px);
+    overflow: auto;
+    padding: 24px;
+    display: grid;
+    gap: 12px;
+  }
+  
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  
+  .actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+  
+  .fc {
+    font-size: 14px;
+  }
+  
+  .fc .fc-button-primary {
+    background: #2563eb;
+    border-color: #2563eb;
+  }
+  
+  @media (max-width: 820px) {
+    .auth-page {
+      grid-template-columns: 1fr;
+      padding: 24px;
+    }
+  
+    .auth-copy h1 {
+      font-size: 38px;
+    }
+  
+    .dashboard-grid,
+    .grid-2,
+    .inline-form {
+      grid-template-columns: 1fr;
+    }
+  
+    .navbar {
+      height: auto;
+      padding: 16px;
+      align-items: flex-start;
+      gap: 12px;
+      flex-direction: column;
+    }
+  
+    .nav-actions {
+      flex-wrap: wrap;
+    }
+  
+    .table-row {
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+  }
+  
